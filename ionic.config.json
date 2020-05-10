@@ -1,0 +1,8 @@
+{
+  "name": "CircuitBreaker",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
