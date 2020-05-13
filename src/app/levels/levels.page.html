@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-title class="ion-text-left">
+      <ion-icon name="home-outline" (click)="return()"></ion-icon> 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let item of information; let i=index;" class="accordion-list" lines="none" detail="false" no-padding>
+    <ion-item tappable (click)="toggleSection(i)" [ngClass]="{'section-active': item.open,'section': !item.open}">
+      <ion-icon slot="end" name="chevron-down-outline" *ngIf="!item.open"></ion-icon>
+      <ion-icon slot="end" name="chevron-up-outline" *ngIf="item.open"></ion-icon>
+      <ion-label>
+        {{item.name}}
+      </ion-label>
+    </ion-item>
+    <div *ngIf="item.children && item.open">
+      <ion-list *ngFor="let child of item.children; let j=index;" lines="none" class="child-list">
+        <ion-item tappable (click)="toggleItem(i,j)" *ngIf="child.children" [ngClass]="{'child-active': child.open,'child': !child.open}">
+          <ion-icon slot="end" name="caret-down-circle-outline" *ngIf="!child.open"></ion-icon>
+          <ion-icon slot="end" name="caret-up-circle-outline" *ngIf="child.open"></ion-icon>
+          <ion-label>
+            {{child.name}}
+          </ion-label>
+        </ion-item>
+        <app-product [product]="child" *ngIf="!child.children"></app-product>
+        <ion-list *ngIf="child.children && child.open" class="product-list" lines="none">
+          <app-product [product]="product" *ngFor="let product of child.children"></app-product>
+        </ion-list>
+      </ion-list>
+    </div>
+  </ion-list>
+
+</ion-content>
