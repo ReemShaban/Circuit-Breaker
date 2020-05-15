@@ -19,6 +19,11 @@ const routes: Routes = [
     path: 'progress',
     loadChildren: () => import('./progress/progress.module').then( m => m.ProgressPageModule)
   },
+  {
+    path: 'quiz',
+    loadChildren: () => import('./quiz/quiz.module').then( m => m.QuizPageModule)
+  },
+
 ];
 
 @NgModule({

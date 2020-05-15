@@ -23,4 +23,7 @@ export class LevelsPage  {
     return() {
       this.router.navigateByUrl('/home');
      }
+     go(where: string) {
+      this.router.navigateByUrl(where);
+     }
   }

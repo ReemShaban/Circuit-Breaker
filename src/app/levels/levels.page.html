@@ -17,6 +17,10 @@
     </ion-item>
     <div *ngIf="item.children && item.open">
       <ion-list *ngFor="let child of item.children; let j=index;" lines="none" class="child-list">
+        <div *ngIf="child.quiz; else elseCondition">
+          <ion-button expand="block" fill="outline"color="danger" (click)="go(child.quiz)">Quiz</ion-button>
+        </div>  
+        <ng-template #elseCondition>
         <ion-item tappable (click)="toggleItem(i,j)" *ngIf="child.children" [ngClass]="{'child-active': child.open,'child': !child.open}">
           <ion-icon slot="end" name="caret-down-circle-outline" *ngIf="!child.open"></ion-icon>
           <ion-icon slot="end" name="caret-up-circle-outline" *ngIf="child.open"></ion-icon>
@@ -28,6 +32,7 @@
         <ion-list *ngIf="child.children && child.open" class="product-list" lines="none">
           <app-product [product]="product" *ngFor="let product of child.children"></app-product>
         </ion-list>
+      </ng-template>
       </ion-list>
     </div>
   </ion-list>

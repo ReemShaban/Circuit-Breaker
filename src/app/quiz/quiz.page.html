@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-title class="ion-text-left">
+      <ion-icon name="home-outline" (click)="return()"></ion-icon> 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides [options]="slideOpts">
+    <ion-slide class="slide">
+      <h3>Question 1</h3>
+
+      <flash-card [isFlipped]="flashCardFlipped">
+        <div class="flash-card-front">
+          <img src="assets/img/welcome-banner.png" />
+        </div>
+        <div class="flash-card-back">Nile Uni</div>
+      </flash-card>
+      <!-- <img src="assets/images/nu.jpeg" class="slide-image" /> -->
+      <h3>What is this?</h3>
+
+      <ion-list no-lines radio-group>
+        <ion-radio-group value="biff">
+          <ion-item>
+            <ion-label>1. Helicopter</ion-label>
+            <ion-radio (click)="selectAnswer()" value="1"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>2. Truck</ion-label>
+            <ion-radio (click)="selectAnswer()" value="2"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>3. Plane</ion-label>
+            <ion-radio (click)="selectAnswer()" value="3"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
