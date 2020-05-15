@@ -11,14 +11,6 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
-  {
-    path: 'levels',
-    loadChildren: () => import('./levels/levels.module').then( m => m.LevelsPageModule)
-  },
-  {
-    path: 'progress',
-    loadChildren: () => import('./progress/progress.module').then( m => m.ProgressPageModule)
-  },
 ];
 
 @NgModule({
