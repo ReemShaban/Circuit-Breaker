@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-import {FlashCardComponent} from '../components/flash-card/flash-card.component';
 
 
 @NgModule({
@@ -13,8 +12,8 @@ import {FlashCardComponent} from '../components/flash-card/flash-card.component'
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule,
+    HomePageRoutingModule
   ],
-  declarations: [HomePage, FlashCardComponent]
+  declarations: [HomePage]
 })
 export class HomePageModule {}

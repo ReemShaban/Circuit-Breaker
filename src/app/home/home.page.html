@@ -1,35 +1,30 @@
-<ion-content>
-  <ion-slides [options]="slideOpts">
-    <ion-slide class="slide">
-      <h3>Question 1</h3>
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-title class="ion-text-left">
+      <ion-icon name="home-outline"></ion-icon> 
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
 
-      <flash-card [isFlipped]="flashCardFlipped">
-        <div class="flash-card-front">
-          <img src="assets/images/nu.jpeg" />
-        </div>
-        <div class="flash-card-back">Nile Uni</div>
-      </flash-card>
-      <!-- <img src="assets/images/nu.jpeg" class="slide-image" /> -->
-      <h3>What is this?</h3>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+    <div id="WelcomePackage">
+      <img src="assets/img/welcome-banner.png" >
+      <h3>Are you ready to become the next Einstein!</h3>
+    </div>
+    
 
-      <ion-list no-lines radio-group>
-        <ion-radio-group value="biff">
-          <ion-item>
-            <ion-label>1. Helicopter</ion-label>
-            <ion-radio (click)="selectAnswer()" value="1"></ion-radio>
-          </ion-item>
 
-          <ion-item>
-            <ion-label>2. Truck</ion-label>
-            <ion-radio (click)="selectAnswer()" value="2"></ion-radio>
-          </ion-item>
+  <div id="container">
+    <!-- <ion-button expand="block" color="danger" href="/levels">Start</ion-button> -->
+    <ion-button (click)="start()" expand="block" color="danger" >Start</ion-button>
+    <ion-button (click)="progress()"expand="block"  >Progress</ion-button>
+  </div>
 
-          <ion-item>
-            <ion-label>3. Plane</ion-label>
-            <ion-radio (click)="selectAnswer()" value="3"></ion-radio>
-          </ion-item>
-        </ion-radio-group>
-      </ion-list>
-    </ion-slide>
-  </ion-slides>
+  
 </ion-content>

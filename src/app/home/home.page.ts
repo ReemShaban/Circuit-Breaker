@@ -1,22 +1,21 @@
-import { Component, ViewChild } from "@angular/core";
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
-@Component({
-  selector: "app-home",
-  templateUrl: "home.page.html",
-  styleUrls: ["home.page.scss"],
+@Component( {
+  selector: 'app-home',
+  templateUrl: 'home.page.html',
+  styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  slideOptions: any;
-  flashCardFlipped = false;
-  slideOpts = {
-    initialSlide: 1,
-    speed: 400,
-  };
-  ionViewDidLoad() {}
 
-  selectAnswer() {
-    this.flashCardFlipped = true;
+  constructor(private router: Router) {}
+  start() {
+    // this.router.navigate(['levels']);
+    this.router.navigateByUrl('/levels');
+  }
+  progress() {
+    // this.router.navigate(['levels']);
+    this.router.navigateByUrl('/progress');
   }
 
-  constructor() {}
 }
