@@ -1,125 +1,108 @@
 {
-    "items": [
+  "items": [
+    {
+      "name": "Level 1",
+      "children": [
         {
-            "name": "Level 1",
-            "children":[
-                {
-                    "name":"What is Electricity",
-                    "children":[
-                        {
-                            "name":"Video Link",
-                            "information":"easy"
-                        }
-                    ]
-                
-                },
-                {
-                    "name":"Voltage",
-                    "children":[
-                        {
-                            "name":"Video Link",
-                            "information":"easy"
-                        }
-                    ]
-                
-                },
-                {
-                    "name":"Current",
-                    "children":[
-                        {
-                            "name":"Video Link",
-                            "information":"easy"
-                        }
-                    ]
-                
-                },
-                {
-                    "quiz":"/quiz"
-                
-                }
-
-            ]
+          "name": "What is Electricity",
+          "children": [
+            {
+              "name": "Video Link",
+              "information": "easy"
+            }
+          ]
         },
         {
-            "name": "Level 2",
-            "children":[
-                {
-                    "name":"Series Connection",
-                    "children":[
-                        {
-                            "name":"Video Link",
-                            "information":"medium"
-                        }
-                    ]
-                
-                },
-                {
-                    "name":"Parallel connection",
-                    "children":[
-                        {
-                            "name":"Video Link",
-                            "information":"medium"
-                        }
-                    ]
-                
-                },
-                {
-                    "quiz":"/quiz"
-                
-                }
-
-
-            ]
+          "name": "Voltage",
+          "children": [
+            {
+              "name": "Video Link",
+              "information": "easy"
+            }
+          ]
         },
         {
-            "name": "Level 3",
-            "children":[
-                {
-                    "name":"Resistance",
-                    "children":[
-                        {
-                            "name":"Video Link",
-                            "information":"hard"
-                        }
-                    ]
-                
-                },
-                {
-                    "name":"Ohm's Law",
-                    "children":[
-                        {
-                            "name":"Video Link",
-                            "information":"hard"
-                        }
-                    ]
-                
-                },
-                {
-                    "quiz":"/quiz"
-                
-                }
-
-            ]
+          "name": "Current",
+          "children": [
+            {
+              "name": "Video Link",
+              "information": "easy"
+            }
+          ]
         },
         {
-            "name": "Level 4",
-            "children":[
-                {
-                    "name":"Mesh Analysis",
-                    "children":[
-                        {
-                            "name":"Video Link",
-                            "information":"expert"
-                        }
-                    ]
-                
-                },
-                {
-                    "quiz":"/quiz"
-                
-                }
-
-            ]
+          "quiz": "/quiz/1"
         }
-    ]
+      ]
+    },
+    {
+      "name": "Level 2",
+      "children": [
+        {
+          "name": "Series Connection",
+          "children": [
+            {
+              "name": "Video Link",
+              "information": "medium"
+            }
+          ]
+        },
+        {
+          "name": "Parallel connection",
+          "children": [
+            {
+              "name": "Video Link",
+              "information": "medium"
+            }
+          ]
+        },
+        {
+          "quiz": "/quiz/2"
+        }
+      ]
+    },
+    {
+      "name": "Level 3",
+      "children": [
+        {
+          "name": "Resistance",
+          "children": [
+            {
+              "name": "Video Link",
+              "information": "hard"
+            }
+          ]
+        },
+        {
+          "name": "Ohm's Law",
+          "children": [
+            {
+              "name": "Video Link",
+              "information": "hard"
+            }
+          ]
+        },
+        {
+          "quiz": "/quiz/3"
+        }
+      ]
+    },
+    {
+      "name": "Level 4",
+      "children": [
+        {
+          "name": "Mesh Analysis",
+          "children": [
+            {
+              "name": "Video Link",
+              "information": "expert"
+            }
+          ]
+        },
+        {
+          "quiz": "/quiz/4"
+        }
+      ]
+    }
+  ]
 }
