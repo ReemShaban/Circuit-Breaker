@@ -1,17 +1,18 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, Input } from "@angular/core";
+import { DomSanitizer } from "@angular/platform-browser";
 
 @Component({
-  selector: 'app-product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.scss'],
+  selector: "app-product",
+  templateUrl: "./product.component.html",
+  styleUrls: ["./product.component.scss"],
 })
-export class ProductComponent implements OnInit {
+export class ProductComponent {
   // tslint:disable-next-line: no-input-rename
-  @Input('product') product: any;
+  @Input("product") product: any;
 
-  constructor() { }
+  constructor(private sanitizer: DomSanitizer) {}
 
-  ngOnInit() {}
-
+  transform(url) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
 }
-

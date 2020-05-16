@@ -11,9 +11,10 @@ import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { HttpClientModule } from "@angular/common/http";
 import { QuizDataService } from "./providers/quiz-data-service";
+import { SafePipe } from "./providers/safePipe";
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, SafePipe],
   entryComponents: [],
   imports: [
     BrowserModule,
