@@ -10,6 +10,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
 
 
 
@@ -19,7 +20,7 @@ import {HttpClientModule} from '@angular/common/http';
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, CommonModule, HttpClientModule],
   providers: [
     StatusBar,
-    SplashScreen,
+    SplashScreen, YoutubeVideoPlayer,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent]
 })

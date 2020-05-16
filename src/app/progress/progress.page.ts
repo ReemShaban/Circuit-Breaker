@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
 
 @Component({
   selector: 'app-progress',
@@ -9,13 +10,17 @@ import { Router } from '@angular/router';
 export class ProgressPage implements OnInit {
 
   //constructor() { }
-  constructor(private router: Router) {}
+  constructor(private router: Router, private youtube: YoutubeVideoPlayer) {}
   return(){
     this.router.navigateByUrl('/home');
   }
 
 
   ngOnInit() {
+  }
+  watch(watch: string){
+    this.youtube.openVideo(watch);
+
   }
 
 }

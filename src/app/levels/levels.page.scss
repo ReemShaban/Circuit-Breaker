@@ -37,7 +37,7 @@ ion-content{
 }
 
 .child{
-    --ion-item-background:#e8e7e6;
+    --ion-item-background:#e9e7e6;
     --ion-item-color: #000;
 }
 .child-active{
@@ -52,4 +52,13 @@ ion-content{
 .product-list{
     padding:0px;
     margin:0px;
+}
+.avatarImg {
+    // margin: 0 auto;
+    // border-radius: 50%;
+     width: auto;
+     display: block;
+     margin-left: 50%;
+     margin-top: 20%;
+     //border: 4px solid white;
 }
