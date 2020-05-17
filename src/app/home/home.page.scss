@@ -1,13 +1,11 @@
 #container {
   text-align: center;
-  font-family: cursive;
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 2%;
+  right: 2%;
   //top: 82%;
-  margin-top:20% ;
+  margin-top:15% ;
 
-  transform: translateY(-50%);
 }
 
 #container strong {
@@ -34,4 +32,10 @@
   margin-left: 5%;
   margin-right:5%;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  .img{
+    height: 60vh;
+  
+    //set the width to 100% of the viewport width
+    width: 80vw; 
+  }
 }

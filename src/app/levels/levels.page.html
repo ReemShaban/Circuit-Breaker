@@ -9,7 +9,7 @@
 <ion-content>
   <ion-list *ngFor="let item of information; let i=index;" class="accordion-list" lines="none" detail="false" no-padding>
     <ion-item tappable (click)="toggleSection(i)" [ngClass]="{'section-active': item.open,'section': !item.open}">
-      <ion-icon slot="end" name="chevron-down-outline" *ngIf="!item.open"></ion-icon>
+      <ion-icon slot="end" name="chevron-down-outline" color= "danger" *ngIf="!item.open"></ion-icon>
       <ion-icon slot="end" name="chevron-up-outline" *ngIf="item.open"></ion-icon>
       <ion-label>
         {{item.name}}
@@ -18,7 +18,11 @@
     <div *ngIf="item.children && item.open">
       <ion-list *ngFor="let child of item.children; let j=index;" lines="none" class="child-list">
         <div *ngIf="child.quiz; else elseCondition">
-          <ion-button expand="block" fill="outline"color="danger" (click)="go(child.quiz)">Quiz</ion-button>
+          <ion-button expand="block" color="success" (click)="go(child.quiz)">
+            <ion-icon name="star-outline" slot="start"></ion-icon>
+              Quiz Round  
+            <ion-icon name="star-outline"  slot="end"></ion-icon>
+          </ion-button>
         </div>  
         <ng-template #elseCondition>
         <ion-item tappable (click)="toggleItem(i,j)" *ngIf="child.children" [ngClass]="{'child-active': child.open,'child': !child.open}">
@@ -36,6 +40,5 @@
       </ion-list>
     </div>
   </ion-list>
-  <img class="avatarImg" src="assets/img/penguin1.png" />
-
+  <img src="assets/img/penguin1.png" class="avatarImg" >
 </ion-content>

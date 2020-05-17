@@ -1,43 +1,45 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="danger">
     <ion-title class="ion-text-left">
-      <ion-icon name="home-outline" (click)="return()"></ion-icon> 
+      <ion-icon name="home-outline" (click)="return()"></ion-icon>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-slides [options]="slideOpts">
-    <ion-slide class="slide">
-      <h3>Question 1</h3>
+  <ion-slides #slides [options]="slideOpts">
+    <ion-slide class="slide" *ngFor="let question of questions; let i = index;">
+      <h3>Question {{i+1}}</h3>
 
-      <flash-card [isFlipped]="flashCardFlipped">
-        <div class="flash-card-front">
-          <img src="assets/img/welcome-banner.png" />
-        </div>
-        <div class="flash-card-back">Nile Uni</div>
+      <flash-card [isFlipped]="question.flashCardFlipped">
+        <div
+          class="flash-card-front"
+          [innerHTML]="question.flashCardFront"
+        ></div>
+        <div class="flash-card-back" [innerHTML]="question.flashCardBack"></div>
       </flash-card>
-      <!-- <img src="assets/images/nu.jpeg" class="slide-image" /> -->
-      <h3>What is this?</h3>
+      <h3>{{question.questionText}}</h3>
 
       <ion-list no-lines radio-group>
         <ion-radio-group value="biff">
-          <ion-item>
-            <ion-label>1. Helicopter</ion-label>
-            <ion-radio (click)="selectAnswer()" value="1"></ion-radio>
-          </ion-item>
+          <ion-item *ngFor="let answer of question.answers; let i = index;">
+            <ion-label >{{i+1}}. {{answer.answer}}</ion-label>
 
-          <ion-item>
-            <ion-label>2. Truck</ion-label>
-            <ion-radio (click)="selectAnswer()" value="2"></ion-radio>
-          </ion-item>
-
-          <ion-item>
-            <ion-label>3. Plane</ion-label>
-            <ion-radio (click)="selectAnswer()" value="3"></ion-radio>
+            <ion-radio
+              (click)="selectAnswer(answer, question)"
+              [disabled]="hasAnswered"
+            ></ion-radio>
           </ion-item>
         </ion-radio-group>
       </ion-list>
+    </ion-slide>
+    <ion-slide>
+      <ion-item>
+        <img src="assets/img/Congratulations.png" >
+      </ion-item>
+      <ion-item>
+        <h2>{{score}}</h2>
+      </ion-item>
     </ion-slide>
   </ion-slides>
 </ion-content>

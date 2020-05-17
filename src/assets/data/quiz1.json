@@ -1,0 +1,40 @@
+{
+  "questions": [
+    {
+      "flashCardFront": "<img src='../assets/img/quiz1-1.png' />",
+      "flashCardBack": "Benjamin Franklin",
+      "flashCardFlipped": false,
+      "questionText": "Who Discovered Electricity?",
+      "answers": [
+        { "answer": "Nicola Tesla", "correct": false, "selected": false },
+        { "answer": "Thomas Edison", "correct": false, "selected": false },
+        { "answer": "Benjamin Franklin", "correct": true, "selected": false },
+        { "answer": "Franklin D. Roosevelt", "correct": false, "selected": false }
+      ]
+    },
+    {
+      "flashCardFront": "<img src='../assets/img/quiz1-2.jpg' />",
+      "flashCardBack": "He got struck by lightning",
+      "flashCardFlipped": false,
+      "questionText": "What happened that lead to his discovery?",
+      "answers": [
+        { "answer": "He was bitten by a stray dog", "correct": false, "selected": false },
+        { "answer": "A volcano erupted", "correct": false, "selected": false },
+        { "answer": "He almost drowned", "correct": false, "selected": false },
+        { "answer": "He got struck by lightning", "correct": true, "selected": false }
+      ]
+    },
+    {
+      "flashCardFront": "<img src='../assets/img/quiz1-3.png' />",
+      "flashCardBack": "yes, we use it everyday in almost everything",
+      "flashCardFlipped": false,
+      "questionText": "Is electricity still used nowadays?",
+      "answers": [
+        { "answer": "yes, we use it everyday in almost everything", "correct": true, "selected": false },
+        { "answer": "yes, but only in light streets", "correct": false, "selected": false },
+        { "answer": " no, we found better things to use", "correct": false, "selected": false },
+        { "answer": " no, we don't use it at all", "correct": false, "selected": false }
+      ]
+    }
+  ]
+}
