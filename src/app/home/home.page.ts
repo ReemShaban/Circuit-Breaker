@@ -13,9 +13,5 @@ export class HomePage {
     // this.router.navigate(['levels']);
     this.router.navigateByUrl('/levels');
   }
-  progress() {
-    // this.router.navigate(['levels']);
-    this.router.navigateByUrl('/progress');
-  }
 
 }
