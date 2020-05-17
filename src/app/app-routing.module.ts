@@ -17,11 +17,7 @@ const routes: Routes = [
     loadChildren: () =>
       import("./levels/levels.module").then((m) => m.LevelsPageModule),
   },
-  {
-    path: "progress",
-    loadChildren: () =>
-      import("./progress/progress.module").then((m) => m.ProgressPageModule),
-  },
+  
   {
     path: "quiz/:id",
     loadChildren: () =>
