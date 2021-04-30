@@ -9,16 +9,16 @@
 <ion-content>
   <ion-slides #slides [options]="slideOpts">
     <ion-slide class="slide" *ngFor="let question of questions; let i = index;">
-      <h3>Question {{i+1}}</h3>
+      <h3 class="QuestionNumberFont">Question {{i+1}}</h3>
 
       <flash-card [isFlipped]="question.flashCardFlipped">
         <div
           class="flash-card-front"
           [innerHTML]="question.flashCardFront"
         ></div>
-        <div class="flash-card-back" [innerHTML]="question.flashCardBack"></div>
+        <div class="flash-card-back" class="Answer"[innerHTML]="question.flashCardBack"></div>
       </flash-card>
-      <h3>{{question.questionText}}</h3>
+      <h3 class="QuestionFont">{{question.questionText}}</h3>
 
       <ion-list no-lines radio-group>
         <ion-radio-group value="biff">
@@ -34,18 +34,10 @@
       </ion-list>
     </ion-slide>
     <ion-slide>
-      <ion-grid>
-        <ion-row>
-          <ion-item lines="none">
-            <img src="assets/img/Congratulations.png" />
-          </ion-item>
-        </ion-row>
-        <ion-row>
-          <ion-col size="3" offset="4">
-            <h2 class="ion-text-center score">{{score}}</h2>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+      <ion-item class="ScoreBoard" lines="none">
+        <h1 >Final Score is </h1>
+        <h1 class="ion-text-center score"> : {{score}}</h1>
+      </ion-item>
     </ion-slide>
   </ion-slides>
 </ion-content>

@@ -1,36 +1,36 @@
 {
   "questions": [
     {
-      "flashCardFront": "<img   class='front-img' src='../assets/img/quiz2-1.jpeg' />",
-      "flashCardBack": "26 V",
+      "flashCardFront": "<img   class='front-img' src='../assets/img/quiz3-1.jpg' />",
+      "flashCardBack": "Voltage, Current and Resistance",
       "flashCardFlipped": false,
-      "questionText": "What is the value of the voltage?",
+      "questionText": "What does the flow of Electricity depend on?",
       "answers": [
-        { "answer": "6.5 V", "correct": false, "selected": false },
-        { "answer": "30 V", "correct": false, "selected": false },
-        { "answer": "26 V", "correct": true, "selected": false }
+        { "answer": "Voltage alone", "correct": false, "selected": false },
+        { "answer": "Resistance alone", "correct": false, "selected": false },
+        { "answer": "Voltage, Current and Resistance", "correct": true, "selected": false }
       ]
     },
     {
-      "flashCardFront": "<img   class='front-img' src='assets/img/quiz2-2.jpeg' />",
-      "flashCardBack": "0.06 A",
+      "flashCardFront": "<img   class='front-img' src='assets/img/quiz3-2.png' />",
+      "flashCardBack": "The Current increases",
       "flashCardFlipped": false,
-      "questionText": "What is the value of the Current?",
+      "questionText": "When the Voltage increases.....",
       "answers": [
-        { "answer": "0.06 A", "correct": true, "selected": false },
-        { "answer": "0.6 A", "correct": false, "selected": false },
-        { "answer": "16 A", "correct": false, "selected": false }
+        { "answer": "The Current decreases", "correct": false, "selected": false },
+        { "answer": "The Current increases", "correct": true, "selected": false },
+        { "answer": "Nothing happens to the Current", "correct": false, "selected": false }
       ]
     },
     {
-      "flashCardFront": "<img   class='front-img' src='assets/img/quiz2-3.jpeg' />",
-      "flashCardBack": "1.3 Ohms",
+      "flashCardFront": "<img   class='front-img' src='assets/img/quiz3-3.jpg' />",
+      "flashCardBack": "The Current decreases",
       "flashCardFlipped": false,
-      "questionText": "What is the value of the Resistance?",
+      "questionText": "When the Resistance increases.....",
       "answers": [
-        { "answer": "35 Ohms", "correct": false, "selected": false },
-        { "answer": "1.3 Ohms", "correct": true, "selected": false },
-        { "answer": "0.7 Ohms", "correct": false, "selected": false }
+        { "answer": "The Current decreases", "correct": true, "selected": false },
+        { "answer": "The Current increases", "correct": false, "selected": false },
+        { "answer": "Nothing happens to the Current", "correct": false, "selected": false }
       ]
     }
   ]
